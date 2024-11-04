@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diablo 3</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s ease;
+        }
+        header h1 {
+            color: #ff0000;
+            font-size: 3em;
+            margin: 0;
+        }
+        nav {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            position: relative;
+        }
+        nav a:hover {
+            color: #ff0000;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #ff0000;
+            left: 0;
+            bottom: -5px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease-in-out;
+        }
+        nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #ff0000;
+            animation: slideInLeft 1s ease;
+        }
+        p, ul {
+            animation: fadeIn 1.5s ease;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 400px;
+            margin: 20px 0;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideInLeft {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        footer p {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Diablo 3</h1>
+    </header>
+
+    <nav>
+        <a href="#historia">Historia</a>
+        <a href="#clases">Clases</a>
+        <a href="#jugabilidad">Jugabilidad</a>
+        <a href="#expansion">Expansiones</a>
+    </nav>
+
+    <section id="historia">
+        <h2>Historia</h2>
+        <p>Diablo 3 es un juego de rol de acción desarrollado por Blizzard Entertainment. Es la tercera entrega de la serie Diablo, situada en un mundo oscuro y gótico donde los héroes deben enfrentarse a las fuerzas del mal lideradas por el Señor del Terror, Diablo.</p>
+        <div class="image">
+            <img src="./Diablo_III_cover.png" alt="Diablo 3 Imagen">
+        </div>
+    </section>
+
+    <section id="carrusel">
+        <h2>Galería de Imágenes</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./diablo-3-5014-2.jpg" alt="Diablo 3 Imagen 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./diablo-iii-section1-feature1.jpg" alt="Diablo 3 Imagen 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./diablo-iii-xbox-360.jpg" alt="Diablo 3 Imagen 3">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section id="clases">
+        <h2>Clases de Personajes</h2>
+        <p>En Diablo 3, los jugadores pueden elegir entre varias clases de personajes, cada una con habilidades únicas:</p>
+        <ul>
+            <li>Guerrero</li>
+            <li>Hechicero</li>
+            <li>Cazador de Demonios</li>
+            <li>Monje</li>
+            <li>Doctor Brujo</li>
+            <li>Cruzado (expansión Reaper of Souls)</li>
+            <li>Necromante (expansión Rise of the Necromancer)</li>
+        </ul>
+    </section>
+
+    <section id="jugabilidad">
+        <h2>Jugabilidad</h2>
+        <p>Diablo 3 ofrece un estilo de juego frenético y orientado a la acción, donde los jugadores exploran mazmorras, derrotan enemigos y obtienen botines. Los jugadores pueden mejorar sus personajes y cooperar en equipos para enfrentarse a desafíos cada vez más difíciles.</p>
+    </section>
+
+    <section id="expansion">
+        <h2>Expansiones</h2>
+        <p>El juego ha recibido dos expansiones principales:</p>
+        <ul>
+            <li><strong>Reaper of Souls:</strong> Añade la clase Cruzado y nuevos actos al juego.</li>
+            <li><strong>Rise of the Necromancer:</strong> Introduce la clase del Nigromante y otras características adicionales.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2024 Diablo 3 Fansite. No oficial, solo con fines informativos.</p>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+</body>
+</html>
